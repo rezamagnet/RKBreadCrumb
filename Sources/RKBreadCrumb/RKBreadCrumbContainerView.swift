@@ -32,6 +32,12 @@ class RKBreadCrumbContainerView: UIView {
     
     private func setModel(_ model: [Model]?) {
         guard let model = model else { fatalError(#function) }
+        if !rootStackView.arrangedSubviews.isEmpty {
+            for view in rootStackView.arrangedSubviews {
+                rootStackView.removeArrangedSubview(view)
+                view.removeFromSuperview()
+            }            
+        }
         for item in model {
             let view = RKBreadCrumbItemView(image: item.image, title: item.title)
             breadCrumbItemView.append(view)

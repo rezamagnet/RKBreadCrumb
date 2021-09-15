@@ -7,20 +7,23 @@
 
 import UIKit
 
-enum Setting {
-    static var spaceBetweenImageAndLabel: CGFloat = 8
-    static var spaceBetweenItems: CGFloat = 8
-    static var breadCrumbViewHeight: CGFloat = 44
-    static var chevronImageSize: CGFloat = 24
-    // Add chevron at end of row
+public enum Setting {
+    public static var spaceBetweenImageAndLabel: CGFloat = 8
+    public static var spaceBetweenItems: CGFloat = 8
+    public static var breadCrumbViewHeight: CGFloat = 44
+    public static var chevronImageSize: CGFloat = 24
+    public // Add chevron at end of row
     static var chevronImage: UIImage = UIImage()
-    static var imageSize: CGFloat = 16
-    static var showsHorizontalScrollIndicator: Bool = true
+    public static var imageSize: CGFloat = 16
+    public static var showsHorizontalScrollIndicator: Bool = false
     // Space at beginning of breadcrumb and at end of breadcrumb
-    static var horizontalInset: CGFloat = 8
-    static var doneColor: UIColor = .green
-    static var todoColor: UIColor = .gray
-    static var inProgressColor: UIColor = .blue
+    public static var horizontalInset: CGFloat = 8
+    public static var doneColor: UIColor = .green
+    public static var todoColor: UIColor = .gray
+    public static var inProgressColor: UIColor = .blue
     /// Hiding title in breadcrumb
-    static var animationDuration: TimeInterval = 0.3
+    public static var animationDuration: TimeInterval = 0.3
+    public static var borderThickness: CGFloat = 1
+    public static var borderColor: UIColor = UIColor.lightGray
+    public static var font: UIFont = .systemFont(ofSize: 12)
 }

@@ -19,14 +19,18 @@ public class RKBreadCrumbViewController: UIViewController {
     private var scrollView = UIScrollView()
     private var breadCrumbContainerView = RKBreadCrumbContainerView()
     private var pagerViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
-    
+    private var lineBottomView = UIView()
     public var currentIndex: Int = .zero { didSet { setIndex(currentIndex) } }
     
     private func setIndex(_ index: Int) {
         guard let index = items.indices.firstIndex(of: index) else { return }
         breadCrumbContainerView.currentIndex = index
         pagerViewController.setViewControllers([items[index].viewController], direction: .forward, animated: true)
-        scrollView.scrollRectToVisible(breadCrumbContainerView.breadCrumbItemView[index].frame, animated: true)
+        scrollToIndex(index)
+    }
+    
+    public func scrollToIndex(_ index: Int, animated: Bool = true) {
+        scrollView.scrollRectToVisible(breadCrumbContainerView.breadCrumbItemView[index].frame, animated: animated)
     }
 
     public override func loadView() {
@@ -65,6 +69,16 @@ public class RKBreadCrumbViewController: UIViewController {
             pagerViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             pagerViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             pagerViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        
+        scrollView.addSubview(lineBottomView)
+        lineBottomView.backgroundColor = Setting.borderColor
+        lineBottomView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            lineBottomView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            lineBottomView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            lineBottomView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            lineBottomView.heightAnchor.constraint(equalToConstant: Setting.borderThickness)
         ])
     }
 }

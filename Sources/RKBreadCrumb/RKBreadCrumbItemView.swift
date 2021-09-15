@@ -35,6 +35,7 @@ public class RKBreadCrumbItemView: UIView {
         self.init(frame: .zero)
         imageView.image = image
         label.text = title
+        label.font = Setting.font
     }
     
     private lazy var rootStackView: UIStackView = {
