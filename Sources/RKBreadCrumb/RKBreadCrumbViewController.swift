@@ -14,7 +14,7 @@ public protocol RKBreadCrumb: RKBreadCrumbContainer {
 public class RKBreadCrumbViewController: UIViewController {
     
     public typealias Model = RKBreadCrumb
-    public var items = [Model]() { didSet { breadCrumbContainerView.model = items } }
+    public var items = [Model]() { didSet { breadCrumbContainerView.model = items; view.layoutIfNeeded() } }
     
     private var scrollView = UIScrollView()
     private var breadCrumbContainerView = RKBreadCrumbContainerView()
