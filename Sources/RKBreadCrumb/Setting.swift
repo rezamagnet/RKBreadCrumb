@@ -12,8 +12,8 @@ public enum Setting {
     public static var spaceBetweenItems: CGFloat = 8
     public static var breadCrumbViewHeight: CGFloat = 44
     public static var chevronImageSize: CGFloat = 24
-    public // Add chevron at end of row
-    static var chevronImage: UIImage = UIImage()
+    // Add chevron at end of row
+    public static var chevronImage: UIImage = UIImage()
     public static var imageSize: CGFloat = 16
     public static var showsHorizontalScrollIndicator: Bool = false
     // Space at beginning of breadcrumb and at end of breadcrumb

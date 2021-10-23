@@ -7,9 +7,7 @@
 
 import UIKit
 
-public protocol RKBreadCrumb: RKBreadCrumbContainer {
-    var viewController: UIViewController { get }
-}
+public protocol RKBreadCrumb: RKBreadCrumbContainer { }
 
 public class RKBreadCrumbViewController: UIViewController {
     
@@ -20,12 +18,12 @@ public class RKBreadCrumbViewController: UIViewController {
     private var breadCrumbContainerView = RKBreadCrumbContainerView()
     private var pagerViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     private var lineBottomView = UIView()
-    public var currentIndex: Int = .zero { didSet { setIndex(currentIndex) } }
+    public private(set) var currentIndex: Int = .zero
     
-    private func setIndex(_ index: Int) {
+    public func setViewController(_ viewController: UIViewController, index: Int) {
         guard let index = items.indices.firstIndex(of: index) else { return }
         breadCrumbContainerView.currentIndex = index
-        pagerViewController.setViewControllers([items[index].viewController], direction: .forward, animated: true)
+        pagerViewController.setViewControllers([viewController], direction: .forward, animated: true)
         scrollToIndex(index)
     }
     
