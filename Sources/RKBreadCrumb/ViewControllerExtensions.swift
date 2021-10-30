@@ -8,13 +8,16 @@
 import UIKit
 
 public extension UIViewController {
-    var breadCrumbViewController: RKBreadCrumbViewController? {
-        if let controller = parent as? RKBreadCrumbViewController {
-            return controller
-        } else if let controller = parent?.parent as? RKBreadCrumbViewController{
-            return controller
+    
+    func getBreadCrumbViewController(_ parent: UIViewController? = nil) -> RKBreadCrumbViewController {
+        if let parent = parent as? RKBreadCrumbViewController {
+            return parent
         } else {
-            return nil
+            if let parent = parent {
+                return getBreadCrumbViewController(parent.parent)
+            } else {
+                return getBreadCrumbViewController(self.parent)
+            }
         }
     }
     
