@@ -14,6 +14,8 @@ public class RKBreadCrumbViewController: UIViewController {
     public typealias Model = RKBreadCrumb
     public var items = [Model]() { didSet { breadCrumbContainerView.model = items; view.layoutIfNeeded() } }
     
+    private lazy var breadCrumbTopAnchor = scrollView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor)
+    
     private var scrollView = UIScrollView()
     private var breadCrumbContainerView = RKBreadCrumbContainerView()
     private var pagerViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
@@ -25,10 +27,36 @@ public class RKBreadCrumbViewController: UIViewController {
         breadCrumbContainerView.currentIndex = index
         pagerViewController.setViewControllers([viewController], direction: .forward, animated: true)
         scrollToIndex(index)
+        if navigationController?.isNavigationBarHidden == true {
+            resetNavigationBarIfNeeded()
+        }
     }
     
     public func scrollToIndex(_ index: Int, animated: Bool = true) {
         scrollView.scrollRectToVisible(breadCrumbContainerView.breadCrumbItemView[index].frame, animated: animated)
+    }
+    
+    private func resetNavigationBarIfNeeded() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        breadCrumbTopAnchor.constant = .zero
+    }
+    
+    /**
+     Define this method in scrollViewDidScroll(_ scrollView: UIScrollView)
+     */
+    public func hideNavigationBar(onScrollView scrollView: UIScrollView) {
+        if let navigationBar = navigationController?.navigationBar {
+            let requiredOffset = navigationBar.frame.height + statusBarHeight
+            if scrollView.contentOffset.y > requiredOffset {
+                navigationController?.setNavigationBarHidden(true, animated: true)
+                breadCrumbTopAnchor.constant = -(navigationBar.frame.height + statusBarHeight)
+            }
+            
+            if scrollView.contentOffset.y < -requiredOffset {
+                navigationController?.setNavigationBarHidden(false, animated: true)
+                breadCrumbTopAnchor.constant = .zero
+            }
+        }
     }
 
     public override func loadView() {
@@ -41,7 +69,7 @@ public class RKBreadCrumbViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            breadCrumbTopAnchor,
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.heightAnchor.constraint(equalToConstant: Setting.breadCrumbViewHeight)
