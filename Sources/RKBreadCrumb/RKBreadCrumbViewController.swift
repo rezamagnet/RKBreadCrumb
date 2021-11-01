@@ -127,6 +127,7 @@ extension RKBreadCrumbViewController: UINavigationControllerDelegate {
         if let index = navigationController.viewControllers.firstIndex(of: viewController) {
             breadCrumbContainerView.currentIndex = index
             scrollToIndex(index)
+            resetNavigationBarIfNeeded()
         }
     }
 }
