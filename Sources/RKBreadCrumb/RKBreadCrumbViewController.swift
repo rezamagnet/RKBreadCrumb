@@ -18,14 +18,26 @@ public class RKBreadCrumbViewController: UIViewController {
     
     private var scrollView = UIScrollView()
     private var breadCrumbContainerView = RKBreadCrumbContainerView()
-    private var pagerViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+    private var breadCrumbNavigationController = UINavigationController()
     private var lineBottomView = UIView()
     public private(set) var currentIndex: Int = .zero
     
-    public func setViewController(_ viewController: UIViewController, index: Int) {
-        guard let index = items.indices.firstIndex(of: index) else { return }
-        breadCrumbContainerView.currentIndex = index
-        pagerViewController.setViewControllers([viewController], direction: .forward, animated: true)
+    public func setViewControllers(_ viewControllers: [UIViewController]) {
+        guard let index = viewControllers.indices.last else { return }
+        
+        
+        if breadCrumbNavigationController.viewControllers.isEmpty {
+            breadCrumbNavigationController.viewControllers = breadCrumbNavigationController.viewControllers + viewControllers
+        } else {
+            if let viewController = viewControllers.last {
+                breadCrumbNavigationController.pushViewController(viewController, animated: true)
+            } else {
+                // Delete all view controllers if is empty
+                breadCrumbNavigationController.viewControllers = []
+            }
+        }
+        
+        breadCrumbContainerView.currentIndex = breadCrumbNavigationController.viewControllers.indices.last ?? .zero
         scrollToIndex(index)
         if navigationController?.isNavigationBarHidden == true {
             resetNavigationBarIfNeeded()
@@ -85,16 +97,17 @@ public class RKBreadCrumbViewController: UIViewController {
             breadCrumbContainerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             breadCrumbContainerView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
         ])
-        
-        addChild(pagerViewController)
-        view.addSubview(pagerViewController.view)
-        pagerViewController.willMove(toParent: self)
-        pagerViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        breadCrumbNavigationController.delegate = self
+        breadCrumbNavigationController.setNavigationBarHidden(true, animated: false)
+        addChild(breadCrumbNavigationController)
+        view.addSubview(breadCrumbNavigationController.view)
+        breadCrumbNavigationController.willMove(toParent: self)
+        breadCrumbNavigationController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            pagerViewController.view.topAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            pagerViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            pagerViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            pagerViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            breadCrumbNavigationController.view.topAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            breadCrumbNavigationController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            breadCrumbNavigationController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            breadCrumbNavigationController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
         scrollView.addSubview(lineBottomView)
@@ -106,5 +119,14 @@ public class RKBreadCrumbViewController: UIViewController {
             lineBottomView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             lineBottomView.heightAnchor.constraint(equalToConstant: Setting.borderThickness)
         ])
+    }
+}
+
+extension RKBreadCrumbViewController: UINavigationControllerDelegate {
+    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if let index = navigationController.viewControllers.firstIndex(of: viewController) {
+            breadCrumbContainerView.currentIndex = index
+            scrollToIndex(index)
+        }
     }
 }
