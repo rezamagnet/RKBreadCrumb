@@ -30,7 +30,9 @@ public class RKBreadCrumbViewController: UIViewController {
             breadCrumbNavigationController.viewControllers = breadCrumbNavigationController.viewControllers + viewControllers
         } else {
             if let viewController = viewControllers.last {
-                breadCrumbNavigationController.pushViewController(viewController, animated: true)
+                DispatchQueue.main.async {
+                    self.breadCrumbNavigationController.pushViewController(viewController, animated: true)                    
+                }
             } else {
                 // Delete all view controllers if is empty
                 breadCrumbNavigationController.viewControllers = []
