@@ -43,7 +43,7 @@ public class RKBreadCrumbViewController: UIViewController {
     private lazy var breadCrumbTopAnchor = breadCrumbCollectionView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor)
     
     private var breadCrumbCollectionView = RKBreadCrumbCollectionView()
-    private var breadCrumbNavigationController = BreadCrumbNavigationController()
+    public private(set) var breadCrumbNavigationController = BreadCrumbNavigationController()
     private var lineBottomView = UIView()
     
     public func setViewControllers(_ viewControllers: [UIViewController]) {

@@ -22,6 +22,7 @@ class RKBreadCrumbCollectionView: UICollectionView {
     
     private func setModel(_ model: [Model]) {
 
+        
         for item in model {
             register(RKBreadCrumbViewCell.self, forCellWithReuseIdentifier: item.title)
         }

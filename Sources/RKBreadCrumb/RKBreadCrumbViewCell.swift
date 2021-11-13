@@ -47,6 +47,8 @@ public class RKBreadCrumbViewCell: UICollectionViewCell {
             label.textColor = setting.doneColor
             imageView.tintColor = setting.doneColor
         }
+        
+        label.font = setting.font
     }
     
     private(set) lazy var chevronImageView = UIImageView(image: self.setting.chevronImage)
