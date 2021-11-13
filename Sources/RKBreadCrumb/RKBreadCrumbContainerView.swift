@@ -7,14 +7,11 @@
 
 import UIKit
 
-public protocol RKBreadCrumbContainer {
-    var title: String { get }
-    var image: UIImage { get }
-}
 
+/*
 class RKBreadCrumbContainerView: UIView {
     
-    private var rootStackView = UIStackView()
+    private(set) var rootStackView = UIStackView()
     private(set) var breadCrumbItemView = [RKBreadCrumbItemView]()
     
     typealias Model = RKBreadCrumbContainer
@@ -69,3 +66,4 @@ class RKBreadCrumbContainerView: UIView {
         rootStackView.layoutMargins = .init(top: .zero, left: Setting.horizontalInset, bottom: .zero, right: Setting.horizontalInset)
     }
 }
+*/

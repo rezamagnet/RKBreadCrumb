@@ -21,7 +21,6 @@ public extension UIViewController {
         }
     }
     
-    
     var statusBarHeight: CGFloat {
         var statusBarHeight: CGFloat = 0
         if #available(iOS 13.0, *) {
