@@ -7,9 +7,9 @@
 
 import UIKit
 
-class BreadCrumbNavigationController: UINavigationController {
+public class BreadCrumbNavigationController: UINavigationController {
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         // TODO: Uncomment here when dynamic implemented
         // interactivePopGestureRecognizer?.delegate = self
@@ -17,7 +17,7 @@ class BreadCrumbNavigationController: UINavigationController {
 }
 
 extension BreadCrumbNavigationController: UIGestureRecognizerDelegate {
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         // TODO: Dynamic this method
         return false
     }

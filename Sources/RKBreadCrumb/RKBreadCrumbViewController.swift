@@ -55,6 +55,10 @@ public class RKBreadCrumbViewController: UIViewController {
         }
     }
     
+    public func pushViewController(_ controller: UIViewController, animated: Bool) {
+        breadCrumbNavigationController.pushViewController(controller, animated: animated)
+    }
+    
     public func scrollTo(index: Int, animated: Bool = true) {
         let indexPath = IndexPath(item: index, section: .zero)
         breadCrumbCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
