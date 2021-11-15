@@ -84,6 +84,7 @@ class RKBreadCrumbCollectionView: UICollectionView {
         super.init(frame: .zero, collectionViewLayout: breadCrumbCollectionLayout)
         delegate = self
         dataSource = self
+        backgroundColor = .white
     }
     
     override func didMoveToSuperview() {
