@@ -28,7 +28,8 @@ public struct Setting {
         animationDuration: TimeInterval = 0.3,
         borderThickness: CGFloat = 1,
         borderColor: UIColor = UIColor.lightGray,
-        font: UIFont = .systemFont(ofSize: 12)
+        font: UIFont = .systemFont(ofSize: 12),
+        backChevronInset: UIEdgeInsets = .zero
     ) {
         self.spaceBetweenImageAndLabel = spaceBetweenImageAndLabel
         self.spaceBetweenItems = spaceBetweenItems
@@ -49,6 +50,7 @@ public struct Setting {
         self.borderThickness = borderThickness
         self.borderColor = borderColor
         self.font = font
+        self.backChevronInset = backChevronInset
     }
     
     static let current = Setting()
@@ -57,6 +59,7 @@ public struct Setting {
     public var spaceBetweenItems: CGFloat = 8
     public var breadCrumbViewHeight: CGFloat = 44
     public var chevronImageSize: CGFloat = 24
+    public var backChevronInset = UIEdgeInsets()
     // Add chevron at end of row
     public var backChevronImage: UIImage = UIImage()
     public var chevronImage: UIImage = UIImage()

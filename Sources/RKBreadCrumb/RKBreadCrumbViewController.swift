@@ -95,6 +95,7 @@ public class RKBreadCrumbViewController: UIViewController {
         super.willMove(toParent: parent)
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         let navigationBackButton = UIBarButtonItem(image: setting.backChevronImage, style: .plain, target: self, action: #selector(navigationBackButtonAction))
+        navigationBackButton.imageInsets = setting.backChevronInset
         navigationItem.leftBarButtonItem = navigationBackButton
     }
     
