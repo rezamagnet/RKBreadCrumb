@@ -47,6 +47,8 @@ class RKBreadCrumbCollectionView: UICollectionView {
     }
     
     private func updateCurrentProgress(_ progress: RKBreadCrumbViewCell.Progress, indexPath: IndexPath) {
+        guard model.indices.contains(indexPath.item) else { return }
+        
         for index in model.indices {
             model[index].progress = .todo
         }

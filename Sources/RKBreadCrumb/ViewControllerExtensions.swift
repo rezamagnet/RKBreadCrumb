@@ -9,14 +9,22 @@ import UIKit
 
 public extension UIViewController {
     
+    fileprivate static var findingParentCounter = 0
+    
     func getBreadCrumbViewController(_ parent: UIViewController? = nil) -> RKBreadCrumbViewController {
         if let parent = parent as? RKBreadCrumbViewController {
             return parent
         } else {
-            if let parent = parent {
-                return getBreadCrumbViewController(parent.parent)
+            if Self.findingParentCounter <= 20 {
+                Self.findingParentCounter += 1
+                if let parent = parent {
+                    return getBreadCrumbViewController(parent.parent)
+                } else {
+                    return getBreadCrumbViewController(self.parent)
+                }
             } else {
-                return getBreadCrumbViewController(self.parent)
+                Self.findingParentCounter = .zero
+                return RKBreadCrumbViewController()
             }
         }
     }
