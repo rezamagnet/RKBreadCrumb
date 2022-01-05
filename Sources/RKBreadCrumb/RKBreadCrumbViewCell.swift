@@ -60,7 +60,6 @@ public class RKBreadCrumbViewCell: UICollectionViewCell {
         var stackView = UIStackView(arrangedSubviews: [imageView, label, chevronImageView])
         stackView.axis = .horizontal
         stackView.spacing = setting.spaceBetweenImageAndLabel
-        stackView.alignment = .center
         return stackView
     }()
     
@@ -70,9 +69,12 @@ public class RKBreadCrumbViewCell: UICollectionViewCell {
         chevronImageView.contentMode = .scaleAspectFit
         chevronImageView.translatesAutoresizingMaskIntoConstraints = false
         let chevronImageWidthConstraint = chevronImageView.widthAnchor.constraint(equalToConstant: setting.chevronImageSize)
-        chevronImageWidthConstraint.priority = .defaultHigh
+        chevronImageWidthConstraint.priority = .required
         chevronImageWidthConstraint.isActive = true
-        chevronImageView.heightAnchor.constraint(equalToConstant: setting.chevronImageSize).isActive = true
+        let chevronImageHeightConstraint = chevronImageView.heightAnchor.constraint(equalToConstant: setting.chevronImageSize)
+        chevronImageHeightConstraint.priority = .init(rawValue: 999)
+        chevronImageHeightConstraint.isActive = true
+        
         chevronImageView.tintColor = .gray
         
         imageView.contentMode = .scaleAspectFit
@@ -101,10 +103,10 @@ public class RKBreadCrumbViewCell: UICollectionViewCell {
         contentView.addSubview(rootStackView)
         rootStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            rootStackView.topAnchor.constraint(equalTo: topAnchor),
-            rootStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            rootStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            rootStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            rootStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            rootStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            rootStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            rootStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
         ])
     }
 }

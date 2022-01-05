@@ -22,7 +22,6 @@ class RKBreadCrumbCollectionView: UICollectionView {
     
     private func setModel(_ model: [Model]) {
 
-        
         for item in model {
             register(RKBreadCrumbViewCell.self, forCellWithReuseIdentifier: item.title)
         }
@@ -81,6 +80,7 @@ class RKBreadCrumbCollectionView: UICollectionView {
     private let breadCrumbCollectionLayout = CollectionViewLayout()
     
     init() {
+        breadCrumbCollectionLayout.minimumLineSpacing = 8
         breadCrumbCollectionLayout.scrollDirection = .horizontal
         breadCrumbCollectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         super.init(frame: .zero, collectionViewLayout: breadCrumbCollectionLayout)
