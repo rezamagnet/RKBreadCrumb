@@ -18,6 +18,7 @@ public class RKBreadCrumbViewCell: UICollectionViewCell {
     
     private func setModel(_ model: Model?) {
         guard let model = model else { fatalError(#function) }
+        imageView.isHidden = model.image == nil
         imageView.image = model.image
         label.text = model.title
         progress = model.progress
@@ -47,7 +48,7 @@ public class RKBreadCrumbViewCell: UICollectionViewCell {
             label.textColor = setting.doneColor
             imageView.tintColor = setting.doneColor
         }
-        
+                
         label.font = setting.font
     }
     

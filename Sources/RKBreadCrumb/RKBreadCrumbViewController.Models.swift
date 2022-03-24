@@ -8,10 +8,10 @@
 import UIKit
 
 extension RKBreadCrumbViewController {
+    
     struct RKBreadCrumbCollectionModel: RKBreadCrumbCollection {
         var title: String
-        var image: UIImage
+        var image: UIImage?
         var progress: RKBreadCrumbViewCell.Progress
     }
-    
 }

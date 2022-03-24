@@ -7,7 +7,38 @@
 
 import UIKit
 
+/**
+ Main class controller where used in app
+ */
 public class RKBreadCrumbViewController: UIViewController {
+    
+    public typealias Model = RKBreadCrumb
+    
+    /**
+     Main init where used for setting navItems, and controllers
+     - Parameter navigationItems: navigation items shows as breadcrumb items
+     - Parameter viewControllers: shows last navigation controller in array
+     
+     - Note: if viewControllers has 2 controllers, first controller not showing when controller didApear
+     */
+    public convenience init(navigationItems: [Model], viewControllers: [UIViewController]) {
+        self.init(nibName: nil, bundle: nil)
+        setupUsing(navigationItems: navigationItems, viewControllers: viewControllers)
+    }
+    
+    private func setupUsing(navigationItems: [Model], viewControllers: [UIViewController]) {
+        precondition(navigationItems.count > 1)
+        precondition(viewControllers.count <= navigationItems.count, "navigationItems must be greater than or equal viewControllers")
+        let items = navigationItems.map { $0.adapted }
+        breadCrumbCollectionView.model = items
+        view.layoutIfNeeded()
+        
+        if breadCrumbNavigationController.viewControllers.isEmpty {
+            breadCrumbNavigationController.viewControllers = viewControllers
+        } else {
+            assertionFailure("ViewControllers set before, please use pushViewController")
+        }
+    }
     
     private var currentControllerIndex: Int = .zero {
         didSet {
@@ -31,29 +62,11 @@ public class RKBreadCrumbViewController: UIViewController {
         }
     }
     
-    public typealias Model = RKBreadCrumb
-    public var items = [Model]() {
-        didSet {
-            let items = items.map { $0.adapted }
-            breadCrumbCollectionView.model = items
-            view.layoutIfNeeded()
-        }
-    }
-    
     private lazy var breadCrumbTopAnchor = breadCrumbCollectionView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor)
     
     private var breadCrumbCollectionView = RKBreadCrumbCollectionView()
     public private(set) var breadCrumbNavigationController = BreadCrumbNavigationController()
     private var lineBottomView = UIView()
-    
-    public func setViewControllers(_ viewControllers: [UIViewController]) {
-
-        if breadCrumbNavigationController.viewControllers.isEmpty {
-            breadCrumbNavigationController.viewControllers = viewControllers
-        } else {
-            assertionFailure("ViewControllers set before, please use pushViewController")
-        }
-    }
     
     public func pushViewController(_ controller: UIViewController, animated: Bool) {
         breadCrumbNavigationController.pushViewController(controller, animated: animated)

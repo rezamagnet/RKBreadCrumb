@@ -9,7 +9,7 @@ import UIKit
 
 public protocol RKBreadCrumbCollection {
     var title: String { get }
-    var image: UIImage { get }
+    var image: UIImage? { get }
     var progress: RKBreadCrumbViewCell.Progress { get set }
 }
 
@@ -47,30 +47,29 @@ class RKBreadCrumbCollectionView: UICollectionView {
     
     private func updateCurrentProgress(_ progress: RKBreadCrumbViewCell.Progress, indexPath: IndexPath) {
         guard model.indices.contains(indexPath.item) else { return }
-        
-        for index in model.indices {
-            model[index].progress = .todo
-        }
-        
-        
-        for index in 0...indexPath.item {
-            let indexPath = IndexPath(item: index, section: .zero)
-            model[index].progress = .done
-            
-            if let cell = cellForItem(at: indexPath) as? RKBreadCrumbViewCell {
-                cell.progress = .done
-            }
-        }
-        
-        model[indexPath.item].progress = progress
-        
-        if let cell = cellForItem(at: indexPath) as? RKBreadCrumbViewCell {
-            cell.progress = progress
-        }
-        
-        
-        // TODO: Add animation
+
         performBatchUpdates {
+            UIView.animate(withDuration: setting.fadeInOutAnimationSpeed) { [self] in
+                for index in model.indices {
+                    model[index].progress = .todo
+                }
+                
+                for index in 0...indexPath.item {
+                    let indexPath = IndexPath(item: index, section: .zero)
+                    model[index].progress = .done
+                    
+                    if let cell = cellForItem(at: indexPath) as? RKBreadCrumbViewCell {
+                        cell.progress = .done
+                    }
+                }
+                
+                model[indexPath.item].progress = progress
+                
+                if let cell = cellForItem(at: indexPath) as? RKBreadCrumbViewCell {
+                    cell.progress = progress
+                }
+            }
+            
             breadCrumbCollectionLayout.invalidateLayout()
         } completion: { _ in }
     }

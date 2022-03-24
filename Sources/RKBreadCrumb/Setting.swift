@@ -7,6 +7,9 @@
 
 import UIKit
 
+/**
+ Setting used for breadcrumb colors, spacing, images and much more
+ */
 public struct Setting {
     
     public init(
@@ -29,7 +32,8 @@ public struct Setting {
         borderThickness: CGFloat = 1,
         borderColor: UIColor = UIColor.lightGray,
         font: UIFont = .systemFont(ofSize: 12),
-        backChevronInset: UIEdgeInsets = .zero
+        backChevronInset: UIEdgeInsets = .zero,
+        fadeInOutAnimationSpeed: TimeInterval = 0.3
     ) {
         self.spaceBetweenImageAndLabel = spaceBetweenImageAndLabel
         self.spaceBetweenItems = spaceBetweenItems
@@ -51,10 +55,12 @@ public struct Setting {
         self.borderColor = borderColor
         self.font = font
         self.backChevronInset = backChevronInset
+        self.fadeInOutAnimationSpeed = fadeInOutAnimationSpeed
     }
     
     static let current = Setting()
-    
+    /// FadeIn/Out animation speed
+    public var fadeInOutAnimationSpeed: TimeInterval = 0.3
     public var spaceBetweenImageAndLabel: CGFloat = 8
     public var spaceBetweenItems: CGFloat = 8
     public var breadCrumbViewHeight: CGFloat = 44
