@@ -1,0 +1,4 @@
+module RKBreadCrumb {
+    header "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumb-Swift.h"
+    requires objc
+}

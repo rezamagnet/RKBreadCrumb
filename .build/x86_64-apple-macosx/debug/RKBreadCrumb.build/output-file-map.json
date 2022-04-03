@@ -1,0 +1,53 @@
+{
+  "": {
+    "swift-dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/master.swiftdeps"
+  },
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/BreadCrumbNavigationController.swift": {
+    "dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/BreadCrumbNavigationController.d",
+    "object": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/BreadCrumbNavigationController.swift.o",
+    "swiftmodule": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/BreadCrumbNavigationController~partial.swiftmodule",
+    "swift-dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/BreadCrumbNavigationController.swiftdeps"
+  },
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumb.swift": {
+    "dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumb.d",
+    "object": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumb.swift.o",
+    "swiftmodule": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumb~partial.swiftmodule",
+    "swift-dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumb.swiftdeps"
+  },
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbCollectionView.swift": {
+    "dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbCollectionView.d",
+    "object": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbCollectionView.swift.o",
+    "swiftmodule": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbCollectionView~partial.swiftmodule",
+    "swift-dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbCollectionView.swiftdeps"
+  },
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbViewCell.swift": {
+    "dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewCell.d",
+    "object": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewCell.swift.o",
+    "swiftmodule": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewCell~partial.swiftmodule",
+    "swift-dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewCell.swiftdeps"
+  },
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbViewController.Models.swift": {
+    "dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewController.Models.d",
+    "object": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewController.Models.swift.o",
+    "swiftmodule": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewController.Models~partial.swiftmodule",
+    "swift-dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewController.Models.swiftdeps"
+  },
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbViewController.swift": {
+    "dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewController.d",
+    "object": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewController.swift.o",
+    "swiftmodule": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewController.swiftdeps"
+  },
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/Setting.swift": {
+    "dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/Setting.d",
+    "object": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/Setting.swift.o",
+    "swiftmodule": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/Setting~partial.swiftmodule",
+    "swift-dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/Setting.swiftdeps"
+  },
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/ViewControllerExtensions.swift": {
+    "dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/ViewControllerExtensions.d",
+    "object": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/ViewControllerExtensions.swift.o",
+    "swiftmodule": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/ViewControllerExtensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/ViewControllerExtensions.swiftdeps"
+  }
+}

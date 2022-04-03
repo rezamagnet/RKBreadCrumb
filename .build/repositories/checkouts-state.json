@@ -1,0 +1,11 @@
+{
+  "object" : {
+    "repositories" : {
+      "https://github.com/apple/swift-docc-plugin" : {
+        "repositoryURL" : "https://github.com/apple/swift-docc-plugin",
+        "subpath" : "swift-docc-plugin-a84d795b"
+      }
+    }
+  },
+  "version" : 1
+}

@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)"
+options: "8f91f5c080ee05dfa082fbbdc06113a444cc9a4781f02ab54a8aa8fd08142ceb"
+build_start_time: [1648957703, 554154872]
+build_end_time: [1648957704, 302905082]
+inputs:
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/BreadCrumbNavigationController.swift": !private [1636808764, 18215656]
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumb.swift": !private [1648100545, 741254806]
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbCollectionView.swift": !private [1648102728, 259154081]
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbViewCell.swift": !private [1648102569, 492309093]
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbViewController.Models.swift": !private [1648102120, 775477647]
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbViewController.swift": !private [1648897529, 85584640]
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/Setting.swift": !private [1648893907, 141098499]
+  "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/ViewControllerExtensions.swift": !private [1637675599, 975153446]

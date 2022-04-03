@@ -1,0 +1,286 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumbPackageTests.xctest/Contents/MacOS/RKBreadCrumbPackageTests",
+      "productName" : "RKBreadCrumbPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "pluginDescriptions" : [
+    {
+      "package" : "swift-docc-plugin",
+      "productNames" : [
+        "Swift-DocC"
+      ],
+      "sources" : {
+        "relativePaths" : [
+          "SwiftDocCConvert.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/ArgumentExtractor+extractSpecifiedTargets.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/PackageExtensions.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/PluginContext+doccExecutableURL.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/SourceModuleTarget+doccCatalogPath.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/Target+defaultSymbolGraphOptions.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/Target+doccArchiveOutputPath.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/Arguments+outputPath.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/Arguments.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/CommandLineOptions/CommandLineOption.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/CommandLineOptions/RequiredCommandLineOption.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/DispatchTimeInterval+descriptionInSeconds.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/DocumentationTargetKind.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/FoundationExtensions/String+singleQuoted.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/HelpInformation.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/ParsedArguments.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginAction.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginFlags/ArgumentsTransforming.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginFlags/DisableIndexFlag.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginFlags/PluginFlag.swift"
+        ],
+        "root" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/checkouts/swift-docc-plugin/Plugins/Swift-DocC Convert"
+      },
+      "targetName" : "Swift-DocC",
+      "toolsVersion" : {
+        "_version" : "5.6.0"
+      }
+    },
+    {
+      "package" : "swift-docc-plugin",
+      "productNames" : [
+        "Swift-DocC Preview"
+      ],
+      "sources" : {
+        "relativePaths" : [
+          "SwiftDocCPreview.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/ArgumentExtractor+extractSpecifiedTargets.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/PackageExtensions.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/PluginContext+doccExecutableURL.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/SourceModuleTarget+doccCatalogPath.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/Target+defaultSymbolGraphOptions.swift",
+          "Symbolic Links/SharedPackagePluginExtensions/Target+doccArchiveOutputPath.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/Arguments+outputPath.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/Arguments.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/CommandLineOptions/CommandLineOption.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/CommandLineOptions/RequiredCommandLineOption.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/DispatchTimeInterval+descriptionInSeconds.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/DocumentationTargetKind.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/FoundationExtensions/String+singleQuoted.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/HelpInformation.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/ParsedArguments.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginAction.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginFlags/ArgumentsTransforming.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginFlags/DisableIndexFlag.swift",
+          "Symbolic Links/SwiftDocCPluginUtilities/PluginFlags/PluginFlag.swift"
+        ],
+        "root" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/checkouts/swift-docc-plugin/Plugins/Swift-DocC Preview"
+      },
+      "targetName" : "Swift-DocC Preview",
+      "toolsVersion" : {
+        "_version" : "5.6.0"
+      }
+    }
+  ],
+  "swiftCommands" : {
+    "C.RKBreadCrumb-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/BreadCrumbNavigationController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumb.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbCollectionView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbViewCell.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbViewController.Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/Setting.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/ViewControllerExtensions.swift"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "RKBreadCrumb",
+      "moduleOutputPath" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.swiftmodule",
+      "objects" : [
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/BreadCrumbNavigationController.swift.o",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumb.swift.o",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbCollectionView.swift.o",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewCell.swift.o",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewController.Models.swift.o",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewController.swift.o",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/Setting.swift.o",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/ViewControllerExtensions.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-apple-macosx10.10",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumb-Swift.h",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/BreadCrumbNavigationController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumb.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbCollectionView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewCell.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewController.Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/RKBreadCrumbViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/Setting.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build/ViewControllerExtensions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/BreadCrumbNavigationController.swift",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumb.swift",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbCollectionView.swift",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbViewCell.swift",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbViewController.Models.swift",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/RKBreadCrumbViewController.swift",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/Setting.swift",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Sources/RKBreadCrumb/ViewControllerExtensions.swift"
+      ],
+      "tempsPath" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.RKBreadCrumbTests-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Tests/RKBreadCrumbTests/RKBreadCrumbTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumb.swiftmodule"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "RKBreadCrumbTests",
+      "moduleOutputPath" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumbTests.swiftmodule",
+      "objects" : [
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumbTests.build/RKBreadCrumbTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-apple-macosx11.0",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumbTests.build/RKBreadCrumbTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumbTests.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/Tests/RKBreadCrumbTests/RKBreadCrumbTests.swift"
+      ],
+      "tempsPath" : "/Users/rezamagnet/Developer/ABI/RKBreadCrumb/.build/x86_64-apple-macosx/debug/RKBreadCrumbTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

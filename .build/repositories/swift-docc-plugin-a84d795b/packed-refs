@@ -1,0 +1,17 @@
+# pack-refs with: peeled fully-peeled sorted 
+ae7f9188982f95aef1bd3cf34e90a9c3aa08d61a refs/heads/franklinsch-patch-1
+1f33ce65e4c34252300a55431c4e1dcf71108b55 refs/heads/gh-pages
+13aa2fcb5ee712176927ccaa50daca4b06a01584 refs/heads/main
+3303b164430d9a7055ba484c8ead67a52f7b74f6 refs/heads/release/1.0
+c589b0a639217d005c503c62b43f9f773b1303b5 refs/pull/1/head
+c81f57a1e2c1edeb07a4952cacdfbc51c75e54cb refs/pull/10/head
+2d5eb5d7d0d831d0569414bd2f11e29beffbb0c5 refs/pull/2/head
+bbbe320221fe40f527918d3b3bbc61a7c18bef5e refs/pull/3/head
+16017355a57ebacada2ca8517e62c450972b98ca refs/pull/4/head
+843bbd48ce3fb038ade70d131eb8fba924324047 refs/pull/5/head
+ad762c0fdc27af3bb5346b7ac20b063eacfd711e refs/pull/6/head
+9d25025c1f44c3287f52229cc910e283bf87db1d refs/pull/7/head
+ae7f9188982f95aef1bd3cf34e90a9c3aa08d61a refs/pull/8/head
+3af1645e340bc2027db36b5560450d3d51976973 refs/pull/9/head
+8c02fd0cfe2ee3952a777d950775fa0a7207dc9b refs/tags/1.0.0
+^3303b164430d9a7055ba484c8ead67a52f7b74f6
