@@ -7,9 +7,6 @@
 
 import UIKit
 
-/**
- Main class controller where used in app
- */
 public class RKBreadCrumbViewController: UIViewController {
     
     public typealias Model = RKBreadCrumb
