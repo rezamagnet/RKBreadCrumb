@@ -11,9 +11,6 @@ let package = Package(
             name: "RKBreadCrumb",
             targets: ["RKBreadCrumb"]),
     ],
-    dependencies: [
-        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
-    ],
     targets: [
         .target(
             name: "RKBreadCrumb",
